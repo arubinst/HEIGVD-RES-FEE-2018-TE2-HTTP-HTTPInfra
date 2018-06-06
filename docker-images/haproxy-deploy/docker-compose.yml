@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  apache_static:
-   image: res/apache_static
+  node-http-server-8080:
+   image: node-http-server-8080
    ports:
      - 8080
    environment:
@@ -22,7 +22,7 @@ services:
   proxy:
     image: dockercloud/haproxy
     depends_on:
-      - apache_static
+      - node-http-server-8080
     environment:
       - BALANCE=leastconn
     volumes:
