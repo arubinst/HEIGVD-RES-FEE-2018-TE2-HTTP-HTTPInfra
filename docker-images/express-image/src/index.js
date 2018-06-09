@@ -4,12 +4,8 @@ var chance = new Chance();
 const express = require('express')
 const app = express()
 
-app.get('/', function (req, res) {
+app.get('/api/express', function (req, res) {
   res.send( generateStudents() )
-})
-
-app.get('/test', function(req, res) {
-  res.send('Test RES')
 })
 
 app.listen(3000, function () {
