@@ -2,7 +2,7 @@ version: '2'
 
 services:
   app1: # Service 1
-    image: res/apache_static # PHP and Apache
+    image: apache-static # PHP and Apache
     container_name: 'app1'  # Name of the container
 
   app2: # Service 2

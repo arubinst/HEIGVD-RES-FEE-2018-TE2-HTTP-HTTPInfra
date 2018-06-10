@@ -24,18 +24,9 @@ function generateAnimals() {
 	var animals = [];
 	for (var i = 0; i < nbAnimals; i++) {
 
-		var gender = chance.gender();
-		var birthYear = chance.year({
-			min: 1986,
-			max: 1996
-		});
-
 		animals.push({
 			animal: chance.animal(),
-			gender: gender,
-			birthday: chance.birthday({
-				year: birthYear
-			}),
+			pays: chance.country({full: true}),
 			city: chance.city()
 		});
 	}
