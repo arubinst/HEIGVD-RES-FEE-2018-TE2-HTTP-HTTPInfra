@@ -5,11 +5,11 @@ const express = require('express')
 const app = express()
 
 app.get('/api/express', function (req, res) {
-  res.send( generateAnimals() )
+	res.send( generateAnimals() )
 })
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+	console.log('Example app listening on port 3000!')
 })
 
 
@@ -32,15 +32,15 @@ function generateAnimals() {
 
 		animals.push({
 			animal: chance.animal(),
-      			color: chance.color(),
 			gender: gender,
 			birthday: chance.birthday({
 				year: birthYear
 			}),
-      			city: chance.city()
+			city: chance.city()
 		});
 	}
 
 	console.log(animals)
 	return animals;
 }
+

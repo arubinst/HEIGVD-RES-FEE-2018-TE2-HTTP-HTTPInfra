@@ -58,9 +58,9 @@
     <div class="container my-auto">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <h1 id="ajax-content" class="text-uppercase">
-            <strong>Your Favorite Source of Free Bootstrap Themes</strong>
-          </h1>
+          <h2 id="ajax-content" class="text-uppercase">
+            <strong>Welcome to our presentation</strong>
+          </h2>
           <hr>
         </div>
         <div class="col-lg-8 mx-auto">
@@ -284,7 +284,7 @@
       type: 'GET',
       dataType: 'json',
       success: function(data){
-        $('#ajax-content').html("Hi ! Let me introduce me, i am : " + data[0].color + " " + data[0].animal + "</br>" + "I was born in " + data[0].birthYear + " and i live in : " + data[0].city);
+        $('#ajax-content').html(data[0].animal + "</br>" + data[0].birthYear + ", " + data[0].city);
       },
       error: function (xhr, ajaxOptions, thrownError) {
         var errorMsg = 'Ajax request failed: ' + xhr.responseText;
